@@ -1,24 +1,16 @@
 {
   "usuarios": [
     {
-      "email": "usuario1@example.com",
-      "senha": "senha1"
+      "email": "peter.parker@spiderman.com",
+      "senha": "parker"
     },
     {
-      "email": "usuario2@example.com",
-      "senha": "senha2"
+      "email": "miles.morales@spiderman.com",
+      "senha": "morales"
     },
     {
-      "email": "usuario3@example.com",
-      "senha": "senha3"
-    },
-    {
-      "email": "usuario4@example.com",
-      "senha": "senha4"
-    },
-      {
-        "email": "usuario5@example.com",
-        "senha": "senha5"
-      }
+      "email": "gwen.stacy@spiderman.com",
+      "senha": "stacy"
+    }
   ]
 }

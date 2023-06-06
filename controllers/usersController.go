@@ -51,7 +51,6 @@ func SignUp(c *gin.Context){
 
 }
 
-
 func Login (c *gin.Context) {
 	var body struct {
 		Email string
@@ -97,13 +96,16 @@ if err != nil {
     return
 }
 
-
 	c.SetSameSite(http.SameSiteLaxMode)
 	c.SetCookie("Authorization", tokenString,3600*24*30,"","",false,true)
 	c.JSON(http.StatusOK, gin.H {
 		"token": tokenString,
 	})
+}
 
-
-
+func Validate (c * gin.Context) {
+	user, _ := c.Get("user")
+	c.JSON(http.StatusOK, gin.H{
+		"message": user,
+	})
 }

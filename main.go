@@ -4,6 +4,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/lucasdamasceno96/go-auth-jwt.git/controllers"
 	"github.com/lucasdamasceno96/go-auth-jwt.git/initializers"
+	"github.com/lucasdamasceno96/go-auth-jwt.git/middleware"
 )
 
 func init(){
@@ -16,6 +17,7 @@ func main() {
 	
   r := gin.Default()
   r.POST("/signup", controllers.SignUp)
-    r.POST("/login", controllers.Login)
+  r.POST("/login", controllers.Login)
+  r.POST("/validate",middleware.RequireAuth, controllers.Validate)
   r.Run() // listen and serve on 0.0.0.0:8080 (for windows "localhost:8080")
 }
