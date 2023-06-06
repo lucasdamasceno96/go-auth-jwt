@@ -6,7 +6,7 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
-	"github.com/golang-jwt/jwt/v5"
+	"github.com/golang-jwt/jwt"
 	"github.com/lucasdamasceno96/go-auth-jwt.git/initializers"
 	"github.com/lucasdamasceno96/go-auth-jwt.git/models"
 	"golang.org/x/crypto/bcrypt"
@@ -84,20 +84,22 @@ func Login (c *gin.Context) {
 		return 
 	}
 
-	token := jwt.NewWithClaims(jwt.SigningMethodES256, jwt.MapClaims{
-		"sub": user.ID,
-		"exp": time.Now().Add(time.Hour * 24 * 30).Unix(),
-	})
+token := jwt.NewWithClaims(jwt.SigningMethodHS256, jwt.MapClaims{
+    "sub": user.ID,
+    "exp": time.Now().Add(time.Hour * 24 * 30).Unix(),
+})
 
-	tokenString, err := token.SignedString([]byte(os.Getenv("SECRET")))
+tokenString, err := token.SignedString([]byte(os.Getenv("SECRET")))
+if err != nil {
+    c.JSON(http.StatusBadRequest, gin.H{
+        "error": "Failed to create token",
+    })
+    return
+}
 
-	if err != nil {
-			c.JSON(http.StatusBadRequest, gin.H{
-			"error" : "Failed to create token",
-		})
-		return 
-	}
 
+	c.SetSameSite(http.SameSiteLaxMode)
+	c.SetCookie("Authorization", tokenString,3600*24*30,"","",false,true)
 	c.JSON(http.StatusOK, gin.H {
 		"token": tokenString,
 	})
