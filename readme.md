@@ -7,7 +7,17 @@
 ## Feature 
 
 
-## Dependency
+## Installation
+
+To use this project, you need to follow these steps:
+
+1. Clone the repository: `git clone https://github.com/username/repo-name.git`
+2. Install the dependencies: `go mod download`
+3. Build the application: `go build`
+4. Run the application: `./main`
+5. There is a json file with some data for test.
+
+## Used Tools
 GORM - https://gorm.io/
 Gin - https://gin-gonic.com/
 Dotenv - https://github.com/joho/godotenv
