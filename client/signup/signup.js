@@ -1,37 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Registro de Usuário</title>
-    <link href="css.css" rel="stylesheet" />
-</head>
-<body>
-      <nav>
-        <a href="#" class="logo"> Spiderman</a>
-        <ul>
-          <li><a href="../index.html"> Home </a></li>
-          <li><a href="https://github.com/lucasdamasceno96"> Contact </a></li>
-        </ul>
-      </nav>
-    </header>
-    <div class="container">
-        <h1>Spiderman Register</h1>
-    <form id="registrationForm" onsubmit="registerUser(event)">
-        <div>
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" required>
-        </div>
-        <div>
-            <label for="password">Password:</label>
-            <input type="password" id="password" required>
-        </div>
-        <div>
-            <button class="btn" type="submit">Register</button>
-        </div>
-    </form>
-</div>
-
-    <script>
-        function registerUser(event) {
+function registerUser(event) {
             event.preventDefault(); // Impede o envio do formulário
 
             // Obtém os valores dos campos de e-mail e senha
@@ -71,7 +38,4 @@
             } else {
                 alert("O domínio de e-mail deve ser '@spiderman'.");
             }
-        }
-    </script>
-</body>
-</html>
+          }
