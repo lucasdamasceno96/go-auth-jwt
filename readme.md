@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/logo.jpg alt="Spider readme">
+  <img src="./assets/logo.jpg" alt="Spider readme">
 </p>
 
 ## Feature 
@@ -21,24 +21,24 @@ To use this project, you need to follow these steps:
 5. There is a json file with some data for test.
 
 ## Used Tools
-GORM - https://gorm.io/
-Gin - https://gin-gonic.com/
-Dotenv - https://github.com/joho/godotenv
-Bcrypt - https://pkg.go.dev/golang.org
-JWT-Go - https://github.com/golang-jwt/jwt
-Compile Daemon - https://github.com/githubnemo/
-Docker/Postgres - https://hub.docker.com/_/postgres
-Tailwind css - https://v1.tailwindcss.com/components/forms
+- GORM - https://gorm.io/
+- Gin - https://gin-gonic.com/
+- Dotenv - https://github.com/joho/godotenv
+- Bcrypt - https://pkg.go.dev/golang.org
+- JWT-Go - https://github.com/golang-jwt/jwt
+- Compile Daemon - https://github.com/githubnemo/
+- Docker/Postgres - https://hub.docker.com/_/postgres
+- Tailwind css - https://v1.tailwindcss.com/components/forms
 
 ## Endpoints 
-http://localhost:8080/signup
-http://localhost:8080/login
-http://localhost:8080/validate
+- http://localhost:8080/signup
+- http://localhost:8080/login
+- http://localhost:8080/validate
 
 ## ENV
-PORT
-SECRET
-DB
+- PORT
+- SECRET
+- DB
 ## Contributing
 
 To contribute to this project, please follow these guidelines:
@@ -54,5 +54,5 @@ To contribute to this project, please follow these guidelines:
 Project made by me.
 ## PRINT
 <p align="center">
-  <img src="./assets/print.png alt="Spider readme">
+  <img src="./assets/print.png" alt="Spider readme">
 </p>
