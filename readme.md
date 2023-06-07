@@ -7,8 +7,9 @@ EN:
 This is a project that i did after watch the new spiderman movie. Here you can register <br/>
 yourself as one of the spiderman team. For register you have to use a email "example@spiderman.com". <br/>
 
-PT: Este é um projeto que resolvi criar apos assistir o novo filme do Spiderman. Você pode se tornar um super heroi</br>
-de uma forma simpĺes. Se registre usando o dominio "example@spiderman.com" e escolha uma missao.
+PT: Este é um projeto que resolvi criar apos assistir o novo filme do Spiderman. Você pode se tornar um super heroi <br/>
+de uma forma simpless. Se registre usando o dominio "example@spiderman.com" e escolha uma missao. <br/> 
+Apos o login ira visualizar uma lista de missoes.
 
 ## Installation
 
